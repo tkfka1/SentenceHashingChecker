@@ -1,10 +1,8 @@
 import hashlib
 
-
 ## SHA-256 해시 함수변환 함수
 def get_hash(sentence):
     return hashlib.sha256(sentence.encode()).hexdigest()
-
 
 ## 해시 테이블 딕셔너리
 hash_table = {}
@@ -26,11 +24,15 @@ def add_sentence(sentence):
         else:
             hash_table[hash_value].append(sentence)
 
-
 ## 테스트
 sentences = ["안녕하세요", "반갑습니다", "안녕하세요", "오늘은 좋은 날씨입니다"]
 for s in sentences:
    add_sentence(s)
+
+## output.txt 파일에서 테스트
+with open('output.txt', 'r', encoding='utf-8') as file:
+    for line in file:
+        add_sentence(line.rstrip())
 
 print("해시 테이블:", hash_table)
 print("중복된 문장 리스트:", duplicated_sentences)

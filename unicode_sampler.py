@@ -24,7 +24,7 @@ def random_unicode_string(length):
 
 ## 문자,문장 개수
 n = 100
-s = 100000
+s = 10000
 
 ## 테스트 출력
 # print(random_unicode_string(n))

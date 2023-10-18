@@ -14,9 +14,9 @@ def add_sentence(sentence):
 
 
 ## 테스트
-# test_sentences = ["안녕하세요", "반갑습니다", "안녕하세요", "오늘은 좋은 날씨입니다"]
-# for s in test_sentences:
-#    add_sentence(s)
+test_sentences = ["안녕하세요", "반갑습니다", "안녕하세요", "오늘은 좋은 날씨입니다"]
+for s in test_sentences:
+   add_sentence(s)
 
 ## output.txt 파일에서 테스트
 with open("output.txt", "r", encoding="utf-8") as file:
